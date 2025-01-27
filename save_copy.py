@@ -16,3 +16,5 @@ model = LlavaForConditionalGeneration.from_pretrained(
     ignore_mismatched_sizes=True
 )
 
+print(model)
+
