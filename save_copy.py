@@ -12,7 +12,6 @@ config_path = "llavaconf.json"
 from transformers import LlavaForConditionalGeneration, LlavaConfig, CLIPVisionConfig, LlamaConfig, AutoModel
 
 llm_model = AutoModel.from_pretrained(checkpoint_name)
-print(llm_model)
 
 # Initializing a CLIP-vision config
 vision_config = CLIPVisionConfig()
@@ -29,3 +28,12 @@ model = LlavaForConditionalGeneration(configuration)
 
 print(model)
 print(llm_model)
+
+# Strictly load the state_dict from `backbone_model` into the llava_model's language_model
+model.language_model.load_state_dict(
+    llm_model.state_dict(),
+    strict=True
+)
+
+print("*****")
+print(model)
