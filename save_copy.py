@@ -7,7 +7,7 @@
 
 
 checkpoint_name = "amuvarma/3b-zuckreg-convo"
-config_path = "llavaconfig.json"
+config_path = "llavaconf.json"
 
 from transformers import LlavaForConditionalGeneration, LlavaConfig, CLIPVisionConfig, LlamaConfig, AutoModel
 
