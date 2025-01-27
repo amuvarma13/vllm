@@ -5,16 +5,18 @@
 # print(model)
 # # model.save_pretrained("./zuckreg")
 
-from transformers import LlavaForCausalLM
+from transformers import LlavaForCausalLM, AutoModel
 
 checkpoint_name = "amuvarma/3b-zuckreg-convo"
+config_path = "llavaconfig.json"
 
-model = LlavaForCausalLM.from_pretrained(checkpoint_name)
+model = LlavaForCausalLM.from_pretrained(
+    pretrained_model_name_or_path=checkpoint_name,
+    config=config_path,
+    ignore_mismatched_sizes=True
+)
 
 print(model)
-# model = LlavaForCausalLM.from_pretrained(
-#     pretrained_model_name_or_path=checkpoint_name,
-#     config=config_path,
-#     ignore_mismatched_sizes=True
-# )
 
+llm_model = AutoModel.from_pretrained(checkpoint_name)
+print(llm_model)
