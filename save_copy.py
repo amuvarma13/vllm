@@ -30,7 +30,7 @@ print(model)
 print(llm_model)
 
 # Strictly load the state_dict from `backbone_model` into the llava_model's language_model
-model.language_model.load_state_dict(
+model.language_model.model.load_state_dict(
     llm_model.state_dict(),
     strict=True
 )
