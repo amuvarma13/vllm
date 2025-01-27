@@ -37,3 +37,5 @@ model.language_model.model.load_state_dict(
 
 print("*****")
 print(model)
+
+model.save_pretrained("./zuckreg-llava")
