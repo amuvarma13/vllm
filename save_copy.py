@@ -5,18 +5,27 @@
 # print(model)
 # # model.save_pretrained("./zuckreg")
 
-from transformers import LlavaForConditionalGeneration, AutoModel
 
 checkpoint_name = "amuvarma/3b-zuckreg-convo"
 config_path = "llavaconfig.json"
 
-model = LlavaForConditionalGeneration.from_pretrained(
-    pretrained_model_name_or_path=checkpoint_name,
-    config=config_path,
-    ignore_mismatched_sizes=True
-)
-
-print(model)
+from transformers import LlavaForConditionalGeneration, LlavaConfig, CLIPVisionConfig, LlamaConfig, AutoModel
 
 llm_model = AutoModel.from_pretrained(checkpoint_name)
+print(llm_model)
+
+# Initializing a CLIP-vision config
+vision_config = CLIPVisionConfig()
+
+# Initializing a Llama config
+text_config = llm_model.config
+
+# Initializing a Llava llava-1.5-7b style configuration
+configuration = LlavaConfig(vision_config, text_config)
+
+# Initializing a model from the llava-1.5-7b style configuration
+model = LlavaForConditionalGeneration(configuration)
+
+
+print(model)
 print(llm_model)
