@@ -9,7 +9,7 @@
     "vision_feature_layer": -2,
     "vision_feature_select_strategy": "default",
   
-    "torch_dtype": "float16",
+    "torch_dtype": "bfloat16",
     
     "text_config": {
       "_name_or_path": "amuvarma/3b-zuckreg-convo",
