@@ -1,4 +1,4 @@
-mdn = "amuvarma/3b-zuckreg-convo"
+mdn = "./zuckreg-llava"
 from vllm import ModelRegistry, LLM, SamplingParams
 import inspect
 
