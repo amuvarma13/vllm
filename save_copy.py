@@ -11,6 +11,7 @@ checkpoint_name = "amuvarma/3b-zuckreg-convo"
 
 model = LlavaForCausalLM.from_pretrained(checkpoint_name)
 
+print(model)
 # model = LlavaForCausalLM.from_pretrained(
 #     pretrained_model_name_or_path=checkpoint_name,
 #     config=config_path,
