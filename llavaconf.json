@@ -12,7 +12,7 @@
     "torch_dtype": "float16",
     
     "text_config": {
-      "_name_or_path": "checkpoints/checkpoint-1250",
+      "_name_or_path": "amuvarma/3b-zuckreg-convo",
       "architectures": [
         "LlamaForCausalLM"
       ],
