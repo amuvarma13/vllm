@@ -8,7 +8,7 @@
 from transformers import LlavaForConditionalGeneration
 
 checkpoint_name = "amuvarma/3b-zuckreg-convo"
-config_path = "amuvarma/3b-zuckreg-convo/config.json"
+config_path = "./llavaconf.json"
 
 model = LlavaForConditionalGeneration.from_pretrained(
     pretrained_model_name_or_path=checkpoint_name,
