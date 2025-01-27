@@ -5,7 +5,7 @@
 # print(model)
 # # model.save_pretrained("./zuckreg")
 
-from transformers import LlavaForConditionalGeneration AutoModel
+from transformers import LlavaForConditionalGeneration, AutoModel
 
 checkpoint_name = "amuvarma/3b-zuckreg-convo"
 config_path = "llavaconfig.json"
