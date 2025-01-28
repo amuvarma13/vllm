@@ -348,8 +348,9 @@ class LlamaModel(nn.Module):
         inputs_embeds: Optional[torch.Tensor] = None,
     ) -> Union[torch.Tensor, IntermediateTensors]:
         
-        print("input idsinput_ids", input_ids)
+        
         if get_pp_group().is_first_rank:
+            print("input idsinput_ids", input_ids)
             if inputs_embeds is not None:
                 hidden_states = inputs_embeds
             else:
