@@ -9,7 +9,7 @@
 checkpoint_name = "amuvarma/3b-zuckreg-convo"
 config_path = "llavaconf.json"
 
-from transformers import LlavaForConditionalGeneration, LlavaConfig, CLIPVisionConfig, LlamaConfig, AutoModel
+from transformers import LlavaForConditionalGeneration, LlavaConfig, CLIPVisionConfig, LlamaConfig, AutoModel, AutoTokenizer
 
 llm_model = AutoModel.from_pretrained(checkpoint_name)
 
