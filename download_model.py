@@ -23,3 +23,7 @@ model_path = snapshot_download(
         "tokenizer.*"
     ]
 )
+
+from transformers import AutoModel 
+model = AutoModel.from_pretrained(model_path)
+model.save_pretrained("zuckreg")
