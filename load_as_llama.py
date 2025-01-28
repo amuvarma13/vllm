@@ -1,4 +1,4 @@
-mdn = "./zuckreg"
+mdn = "./zuckreg-llava"
 from vllm import  LLM, SamplingParams
 import torch
 
