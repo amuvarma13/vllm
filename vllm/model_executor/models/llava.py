@@ -198,7 +198,7 @@ class LlavaDummyInputsBuilder(BaseDummyInputsBuilder[_I]):
             # prompt_text=image_token * num_images,
             prompt_text="<|image|>",
             mm_data=mm_data,
-        )
+        ) 
 
 
 class LlavaProcessingInfo(BaseLlavaProcessingInfo):
