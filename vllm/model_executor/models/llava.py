@@ -188,10 +188,10 @@ class LlavaDummyInputsBuilder(BaseDummyInputsBuilder[_I]):
             self.info.get_image_size_with_most_features()
 
         mm_data = {
-            "image":
-            self._get_dummy_images(width=target_width,
-                                   height=target_height,
-                                   num_images=num_images)
+            "image":torch.rand(1,1,3072)
+            # self._get_dummy_images(width=target_width,
+            #                        height=target_height,
+            #                        num_images=num_images)
         }
 
         return ProcessorInputs(
