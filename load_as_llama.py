@@ -11,6 +11,6 @@ llm = LLM(model=mdn)
 image_embeds = torch.randn( 1, 3072)
 print(image_embeds.shape)
 
-outputs = llm.generate(text="The quick brown fox jumps over the lazy dog.", image_embeds=image_embeds, sampling_params=sampling_params)
+outputs = llm.generate(text="<|image|>", image_embeds=image_embeds, sampling_params=sampling_params)
 
 print(outputs)
