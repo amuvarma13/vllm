@@ -193,7 +193,7 @@ class LlavaDummyInputsBuilder(BaseDummyInputsBuilder[_I]):
             #                        height=target_height,
             #                        num_images=num_images)
         }
-
+        print("image token is", image_token)
         return ProcessorInputs(
             # prompt_text=image_token * num_images,
             prompt_text="Hello there how are you?",
