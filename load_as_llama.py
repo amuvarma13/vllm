@@ -11,6 +11,10 @@ llm = LLM(model=mdn)
 image_embeds = torch.randn( 1, 3072)
 print(image_embeds.shape)
 
-outputs = llm.generate(text="<|image|>", image_embeds=image_embeds, sampling_params=sampling_params)
+outputs = llm.generate({
+    # "prompt_embeds": image_embeds,
+    # "multi_modal_data": {"image": None},
+    "text":"The quick brown fox jumps over the lazy dog.",
+})
 
 print(outputs)
