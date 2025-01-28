@@ -39,3 +39,7 @@ print("*****")
 print(model)
 
 model.save_pretrained("./zuckreg-llava")
+
+tokenizer = AutoTokenizer.from_pretrained(checkpoint_name)
+tokenizer.add_special_tokens({"additional_special_tokens": ["<|image|>"]})
+tokenizer.save_pretrained("./zuckreg-llava")

@@ -3,7 +3,7 @@
     "model_type": "llava",
     
     "ignore_index": -100,
-    "image_token_index": 32000,
+    "image_token_index": 156940,
     "pad_token_id": 32001,
     "projector_hidden_act": "gelu",
     "vision_feature_layer": -2,
