@@ -354,7 +354,7 @@ class LlamaModel(nn.Module):
                 hidden_states = inputs_embeds
             else:
                 hidden_states = self.get_input_embeddings(input_ids)
-                print("hidden_states", hidden_states)
+                print("getting cuda graphs")
             residual = None
         else:
             assert intermediate_tensors is not None
