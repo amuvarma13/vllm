@@ -12,7 +12,8 @@ sampling_params = SamplingParams(temperature=0.8, top_p=0.95)
 
 llm = LLM(model=mdn)
 
-image_embeds = torch.randn(1, 3072)
+image_embeds = torch.randn(1, 1, 3072)
+print(image_embeds.shape)
 
 outputs = llm.generate({
     "prompt": prompt,
