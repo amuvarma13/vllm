@@ -1,8 +1,5 @@
 mdn = "./zuckreg"
-from vllm import ModelRegistry, LLM, SamplingParams
-import inspect
-from transformers import AutoTokenizer
-tkn = AutoTokenizer.from_pretrained(mdn)
+from vllm import  LLM, SamplingParams
 import torch
 
 # tokens = tkn(prompt, return_tensors="pt")
