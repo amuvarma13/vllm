@@ -179,6 +179,7 @@ class LlavaDummyInputsBuilder(BaseDummyInputsBuilder[_I]):
         seq_len: int,
         mm_counts: Mapping[str, int],
     ) -> ProcessorInputs:
+        print("getting dummy processor inputs") 
         num_images = mm_counts.get("image", 0)
 
         processor = self.info.get_hf_processor()
