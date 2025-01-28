@@ -148,7 +148,7 @@ class InputProcessingContext(InputContext):
         if base_kwargs is None:
             base_kwargs = {}
 
-        print(base_kwargs, kwargs)
+        print(data, base_kwargs, kwargs)
 
         merged_kwargs = resolve_mm_processor_kwargs(
             base_kwargs,
