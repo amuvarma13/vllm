@@ -26,4 +26,4 @@ model_path = snapshot_download(
 
 from transformers import AutoModel 
 model = AutoModel.from_pretrained(model_path)
-model.save_pretrained("zuckreg")
+model.save_pretrained("zuckreg") 
