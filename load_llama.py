@@ -1,4 +1,4 @@
-mdn = "./zuckreg"
+mdn = "amuvarma/3b-zuckreg-convo"
 from vllm import ModelRegistry, LLM, SamplingParams
 prompts = [
     "Hello, my name is",
