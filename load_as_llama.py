@@ -13,7 +13,8 @@ print(image_embeds.shape)
 
 outputs = llm.generate({
     "prompt_embeds": image_embeds,
-    "multi_modal_data": {"image": None}
+    "multi_modal_data": {"image": None},
+    "text":"The quick brown fox jumps over the lazy dog.",
 })
 
 print(outputs)
