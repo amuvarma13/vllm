@@ -196,7 +196,7 @@ class LlavaDummyInputsBuilder(BaseDummyInputsBuilder[_I]):
         print("image token is", image_token)
         return ProcessorInputs(
             # prompt_text=image_token * num_images,
-            prompt_text=image_token,
+            prompt_text="<|image|>",
             mm_data=mm_data,
         )
 
